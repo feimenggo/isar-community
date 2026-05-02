@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export MACOSX_DEPLOYMENT_TARGET=10.15
 
 # Definir a toolchain específica para macOS
 RUST_TOOLCHAIN="1.88.0-x86_64-apple-darwin"

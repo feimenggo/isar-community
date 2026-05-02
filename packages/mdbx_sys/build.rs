@@ -187,6 +187,10 @@ fn main() {
         cc_builder.define("MDBX_ENV_CHECKPID", "0");
     }
 
+    if target_os == "macos" {
+        cc_builder.flag("-mmacosx-version-min=10.15");
+    }
+
     if target.contains("windows") {
         println!(r"cargo:rustc-link-lib=dylib=ntdll");
         println!(r"cargo:rustc-link-lib=dylib=user32");
